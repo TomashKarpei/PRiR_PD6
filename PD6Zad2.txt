@@ -1,0 +1,5 @@
+Po wykonaniu 10 uruchomień programu na CPU i GPU można stwierdzić, że różnica między CPU a GPU Google colab jest znikoma. Z czego można wywnioskować, że Google colab ma bardzo szybki CPU lub wolny GPU, ponieważ różnica między GPU a CPU powinna być znacząca
+CPU:
+25, 33, 18, 17, 17, 16, 16, 26, 34, 36 sek.
+GPU:
+16, 16, 23, 31, 16, 17, 28, 34, 38, 17 sek.
