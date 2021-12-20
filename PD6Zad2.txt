@@ -1,5 +1,14 @@
-Po wykonaniu 10 uruchomień programu na CPU i GPU można stwierdzić, że różnica między CPU a GPU Google colab jest znikoma. Z czego można wywnioskować, że Google colab ma bardzo szybki CPU lub wolny GPU, ponieważ różnica między GPU a CPU powinna być znacząca
-CPU:
-25, 33, 18, 17, 17, 16, 16, 26, 34, 36 sek.
-GPU:
-16, 16, 23, 31, 16, 17, 28, 34, 38, 17 sek.
+Po wykonaniu 10 uruchomień programy wyliczenia wektorów i 5 uruchomień programy wyliczenia punktów Fraktalu Julii na CPU i GPU można stwierdzić, że różnica między CPU a GPU Google colab jest znaczna. GPU wykonuje operacje w sekundach, a CPU wymaga dziesiątek sekund na wykonanie.
+
+W programie do obliczania wektorów obliczana jest duża liczba wektorów, a dzięki rdzeniom CUDA i dystrybucji pracy między nimi GPU wykonuje obliczenia wielokrotnie szybciej niż CPU
+
+Suma wektorów, wariant CPU:
+14, 15, 14, 16, 15, 15, 15, 14, 15, 15 sek.
+Suma wektorów, wariant GPU:
+1,1,1,1,2,1,1,1,1,1 sek.
+
+W programie do obliczenia punktów Fraktalu Julii taksamo obliczana jest duża ilość punktów a dzięki rdzeniom CUDA i dystrybucji pracy między nimi GPU wykonuje obliczenia wielokrotnie szybciej niż CPU
+Fraktal Julii CPU:
+2 min 10 sek, 1 min 58 sek, 2 min 18 sek, 2 min 4 sek, 2 min 21 sek.
+Fraktal Julii GPU:
+1 sek, 1 sek, 1 sek, 2 sek, 1 sek.
